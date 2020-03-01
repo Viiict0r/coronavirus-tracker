@@ -3,6 +3,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import Index from './pages/Index';
 import Statistics from './pages/Statistics';
+import Mapa from './pages/Mapa';
 
 import colors from './styles/colors';
 
@@ -18,6 +19,10 @@ const Routes = createAppContainer(
       Statistics: {
         screen: Statistics,
         navigationOptions: Statistics.navigationOptions,
+      },
+      Mapa: {
+        screen: Mapa,
+        navigationOptions: Mapa.navigationOptions,
       },
     },
     {

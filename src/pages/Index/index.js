@@ -45,7 +45,7 @@ export default function Index({ navigation }) {
           <ButtonText>Estatísticas</ButtonText>
         </ButtonLayout>
         <ButtonLayout>
-          <Button>
+          <Button onPress={() => navigation.navigate('Mapa')}>
             <Image
               source={require('../../assets/img/pin.png')}
               style={{
