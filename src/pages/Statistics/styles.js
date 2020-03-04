@@ -4,7 +4,7 @@ import colors from '../../styles/colors';
 
 export const CaseContainer = styled.View`
   border: 1px solid ${colors.secondary};
-  padding: 15px;
+  padding: 12px;
   border-radius: 28px;
   width: ${props => props.width}%;
 `;

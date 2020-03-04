@@ -41,10 +41,10 @@ export default function Statistics() {
 
       data.forEach(obj => {
         dt.push([
-          obj.country,
-          numberWithCommas(obj.confirmed_amount),
-          numberWithCommas(obj.death_amount),
-          numberWithCommas(obj.recovered_amount),
+          String(obj.country).replace('Mainland ', ''),
+          numberWithCommas(String(obj.confirmed_amount)),
+          numberWithCommas(String(obj.death_amount)),
+          numberWithCommas(String(obj.recovered_amount)),
         ]);
 
         totalConfirmed += obj.confirmed_amount;
@@ -57,7 +57,6 @@ export default function Statistics() {
       setCura(totalRecovered);
       setTableData(dt);
     } catch (error) {
-      console.log(error);
       Alert.alert('Erro', 'Não foi possível obter as informações do servidor.');
     } finally {
       setLoading(false);
@@ -71,6 +70,9 @@ export default function Statistics() {
   }
 
   function numberWithCommas(x) {
+    if (x === 'null') {
+      return '0';
+    }
     const parts = x.toString().split('.');
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     return parts.join(',');
