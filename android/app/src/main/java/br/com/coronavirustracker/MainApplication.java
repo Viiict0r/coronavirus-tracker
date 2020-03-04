@@ -1,4 +1,4 @@
-package com.coronavirustracker;
+package br.com.coronavirustracker;
 
 import android.app.Application;
 import android.content.Context;

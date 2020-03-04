@@ -1,4 +1,4 @@
-package com.coronavirustracker;
+package br.com.coronavirustracker;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
