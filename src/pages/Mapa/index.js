@@ -29,7 +29,6 @@ import {
 export default function Mapa() {
   const [loading, setLoading] = useState(true);
   const [values, setValues] = useState([]);
-  const [currentRegion, setCurrentRegion] = useState({});
   const [selectedData, setSelectedData] = useState(null);
   const [displayInfos, setDisplayInfos] = useState(false);
 
@@ -50,7 +49,6 @@ export default function Mapa() {
   function handleRegionChanged(region) {
     setDisplayInfos(false);
     setSelectedData(null);
-    setCurrentRegion(region);
   }
 
   function handleSelect(obj) {

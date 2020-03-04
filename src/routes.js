@@ -1,9 +1,14 @@
 import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import {
+  createStackNavigator,
+  TransitionSpecs,
+  CardStyleInterpolators,
+} from 'react-navigation-stack';
 
 import Index from './pages/Index';
 import Statistics from './pages/Statistics';
 import Mapa from './pages/Mapa';
+import Credits from './pages/Credits';
 
 import colors from './styles/colors';
 
@@ -24,6 +29,10 @@ const Routes = createAppContainer(
         screen: Mapa,
         navigationOptions: Mapa.navigationOptions,
       },
+      Credits: {
+        screen: Credits,
+        navigationOptions: Credits.navigationOptions,
+      },
     },
     {
       defaultNavigationOptions: {
@@ -31,6 +40,11 @@ const Routes = createAppContainer(
           backgroundColor: colors.primary,
         },
         headerTintColor: colors.secondary,
+        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        transitionSpec: {
+          open: TransitionSpecs.TransitionIOSSpec,
+          close: TransitionSpecs.TransitionIOSSpec,
+        },
       },
     }
   )

@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 
 import React from 'react';
-import { Image, Text } from 'react-native';
+import { Image, Text, TouchableOpacity } from 'react-native';
 import APP_VERSION from '../../config/version';
 
 import { Container } from '../../components/Container';
@@ -58,15 +58,17 @@ export default function Index({ navigation }) {
         </ButtonLayout>
       </ContainerButtons>
       <Bottom>
-        <BottomLayout />
-        <BottomLayout>
+        <BottomLayout size={10} />
+        <BottomLayout size={80} style={{ alignItems: 'center' }}>
           <Version>Versão {APP_VERSION}</Version>
         </BottomLayout>
-        <BottomLayout>
-          <ButtonExclamation
-            style={{ width: 21, height: 21, borderRadius: 100 / 2 }}>
-            <Text style={{ color: '#fff', fontSize: 15 }}>!</Text>
-          </ButtonExclamation>
+        <BottomLayout size={10}>
+          <TouchableOpacity onPress={() => navigation.navigate('Credits')}>
+            <ButtonExclamation
+              style={{ width: 21, height: 21, borderRadius: 100 / 2 }}>
+              <Text style={{ color: '#fff', fontSize: 15 }}>!</Text>
+            </ButtonExclamation>
+          </TouchableOpacity>
         </BottomLayout>
       </Bottom>
     </Container>

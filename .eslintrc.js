@@ -35,6 +35,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
     'no-use-before-define': 'off',
-    'camelcase': 'off'
+    'camelcase': 'off',
+    'no-unused-vars': 'off'
   },
 };
