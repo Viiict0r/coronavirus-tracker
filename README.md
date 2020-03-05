@@ -2,6 +2,8 @@
 
 ![App Image](/docs/assets/4.jpg)
 
+## About
+
 O aplicativo basicamente consiste em mostrar as estatísticas atuais do coronavírus para o usuário.
 Ele consome uma API que fornece os dados mais atualizados extraidos de um [repositório](https://github.com/CSSEGISandData/COVID-19) que fornece os dados atualizados a cada 24 horas.
 
